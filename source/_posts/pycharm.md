@@ -7,11 +7,11 @@ PyCharm’s run configuration.
 
 For the sake of demo, let's narrow down the issue to the problem area—nothing fancy, 
 just a simple 'import numpy' statement: 
-![image](..\images\p1-1.jpg)
+![image](.\images\p1-1.jpg)
 Running this in a standalone terminal outside PyCharm was fine like this:
-![image](..\images\p1-2.png)
+![image](.\images\p1-2.png)
 Then in PyCharm I make a run configuration:
-![image](..\images\p1-3.jpg)
+![image](.\images\p1-3.jpg)
 You see there's nothing special: same Python path and no other environment variables.
 However, running it leads to this long error:
 ``` bash
@@ -69,7 +69,7 @@ But the mystery lingered and I still needed to figure this out.
 The only possible culprit is PyCharm so I decided to reinstall it. In their download 
 page, I came up with a plausible explanation: there is actually a specific 
 version of PyCharm tailored for Apple Silicon and I was using the wrong one. 
-![image](..\images\p1-4.jpg)
+![image](.\images\p1-4.jpg)
 
 As expected, after installing the correct PyCharm and changing all my packages
 to ARM architecture, those import issues vanished.
