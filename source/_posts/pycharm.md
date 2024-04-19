@@ -7,11 +7,14 @@ PyCharm’s run configuration.
 
 For the sake of demo, let's narrow down the issue to the problem area—nothing fancy, 
 just a simple 'import numpy' statement: 
-![image](.\images\p1-1.jpg)
+<img src="/images/p1-1.jpg" width="500">
+
 Running this in a standalone terminal outside PyCharm was fine like this:
-![image](.\images\p1-2.png)
+<img src="/images/p1-2.png" width="500">
+
 Then in PyCharm I make a run configuration:
-![image](.\images\p1-3.jpg)
+<img src="/images/p1-3.jpg" width="600">
+
 You see there's nothing special: same Python path and no other environment variables.
 However, running it leads to this long error:
 ``` bash
@@ -56,9 +59,10 @@ Please carefully study the documentation linked above for further help.
 ```
 
 It’s basically asking for numpy package in x86 architecture instead of ARM. 
-That is odd considering M2 MacBook is using ARM. And why did it work outside PyCharm?
-At that time, I really needed PyCharm to do some debugging, 
-so I circumvented it by switching my Python packages (not only numpy) to x86—and it worked!
+That is odd considering M2 MacBook is using ARM. 
+And why did it work outside PyCharm? At that time, I really needed PyCharm to do 
+some debugging, so I circumvented it by switching my Python packages (not only numpy) 
+to x86—and it worked!
 
 BTW, the command to install packages for specific architecture is useful:
 ```commandline
@@ -68,8 +72,8 @@ arch -x86_64 pip3 install numpy --compile --no-cache-dir
 But the mystery lingered and I still needed to figure this out. 
 The only possible culprit is PyCharm so I decided to reinstall it. In their download 
 page, I came up with a plausible explanation: there is actually a specific 
-version of PyCharm tailored for Apple Silicon and I was using the wrong one. 
-![image](.\images\p1-4.jpg)
+version of PyCharm tailored for Apple Silicon and I was using the wrong one.
+<img src="/images/p1-4.jpg" width="500">
 
 As expected, after installing the correct PyCharm and changing all my packages
 to ARM architecture, those import issues vanished.
