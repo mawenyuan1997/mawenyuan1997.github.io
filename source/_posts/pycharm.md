@@ -1,5 +1,6 @@
 ---
 title: A good-to-know for PyCharm in M series chipset
+date: 2024-04-17
 ---
 PyCharm is a powerful tool in Python development for most of the time, but occasionally it stumbles. 
 Recently, I encountered a strange issue when using it on a new M2 MacBook: my code ran smoothly in the terminal but but not in 

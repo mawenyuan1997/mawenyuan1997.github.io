@@ -1,5 +1,6 @@
 ---
 title: Understanding Boyer-Moore's Voting Algorithm
+date: 2024-06-12
 ---
 
 Boyer-Moore voting algorithm is used to find the majority element in an array. By 'majority',
@@ -56,7 +57,7 @@ same array.
 
 This algorithm optimizes the space complexity to O(1) but
 that still doesn’t make it seem very useful.
-Next I will show a use case that makes it shining.
+Next I will show a use case that makes it shine.
 
 Suppose we have a long array a and there is a stream of 
 query `(l,r)` which asks for the majority element of subarray `a[l…r]`
